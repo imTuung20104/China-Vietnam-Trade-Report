@@ -1,28 +1,18 @@
 # 🇨🇳 China-Vietnam Trade Dashboard
 
-> **Bảng điều khiển tương tác theo dõi kim ngạch Xuất Nhập Khẩu Việt - Trung (Interactive Data App).**
+> **Bảng điều khiển theo dõi kim ngạch Xuất Nhập Khẩu (Interactive Dashboard).**
 
-[![Streamlit](https://img.shields.io/badge/App-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Plotly](https://img.shields.io/badge/Viz-Plotly-3F4F75?logo=plotly&logoColor=white)](https://plotly.com/)
-[![Data Source](https://img.shields.io/badge/Data-Vietnam_Customs-yellow?style=flat-square)]()
+![Streamlit](https://img.shields.io/badge/App-Streamlit-FF4B4B) ![Data](https://img.shields.io/badge/Data-Vietnam_Customs-yellow)
 
-## 🚩 Bối cảnh (Context)
-Thị trường Trung Quốc biến động liên tục. Việc đọc các file PDF báo cáo từ Tổng cục Hải quan (General Dept of Vietnam Customs) rất khó để nhìn ra xu hướng (Trend) nhập hàng.
-* **Mục tiêu:** Xây dựng dashboard giúp bộ phận Purchasing quyết định thời điểm nhập hàng tốt nhất.
+## 📸 Giao diện Dashboard
+Dưới đây là biểu đồ theo dõi xu hướng nhập khẩu theo thời gian thực:
 
-## 📊 Tính năng Dashboard
-1.  **Trend Tracker:** Biểu đồ đường (Line Chart) theo dõi biến động kim ngạch theo tháng (MoM).
-2.  **Top Commodities:** Biểu đồ cột (Bar Chart) top 5 nhóm hàng nhập khẩu nhiều nhất (theo mã HS 2 số).
-3.  **Exchange Rate Monitor:** Theo dõi biến động tỷ giá CNY/VND ảnh hưởng đến giá vốn hàng bán (COGS).
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" width="100%" style="border-radius: 10px">
 
-## 📂 Project Structure
-```text
-China-Vietnam-Trade-Report/
-├── 📂 dataset/
-│   ├── vn_cn_trade_2024.csv  # Dữ liệu sạch (Cleaned Data)
-│   └── raw_customs_data/     # Dữ liệu thô tải từ HQVN
-├── 📂 app/
-│   ├── app.py                # File chạy Streamlit
-│   └── charts.py             # Code vẽ biểu đồ Plotly
-├── requirements.txt
-└── README.md
+## 📊 Tính năng chính
+1.  **Theo dõi xu hướng:** Biểu đồ đường (Line Chart) thể hiện kim ngạch nhập khẩu tăng/giảm qua các tháng.
+2.  **Top Hàng hóa:** Biểu đồ cột (Bar Chart) top 5 mặt hàng nhập nhiều nhất từ Trung Quốc.
+3.  **Cảnh báo tỷ giá:** Theo dõi biến động CNY/VND để chọn thời điểm thanh toán T/T tốt nhất.
+
+## 📂 Dữ liệu
+Dữ liệu được lấy từ báo cáo định kỳ của **Tổng cục Hải quan Việt Nam**, sau đó được làm sạch bằng **Pandas**.
